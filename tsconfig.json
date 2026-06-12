@@ -12,6 +12,6 @@
     "resolveJsonModule": true,
     "ignoreDeprecations": "6.0"
   },
-  "include": ["server.ts", "server/**/*.ts"],
+  "include": ["index.ts", "index/**/*.ts"],
   "exclude": ["node_modules", "dist"]
 }
