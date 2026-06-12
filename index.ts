@@ -2,9 +2,9 @@ import express from "express";
 import path from "path";
 import cors from "cors";
 import dotenv from "dotenv";
-import apiRouter from "./server/api";
-import { initDatabase } from "./server/db";
-import * as repo from "./server/repository";
+import apiRouter from "./src/api";
+import { initDatabase } from "./src/db";
+import * as repo from "./src/repository";
 
 dotenv.config();
 
