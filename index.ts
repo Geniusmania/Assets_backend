@@ -38,9 +38,9 @@ async function startServer() {
   if (process.env.NODE_ENV === "production") {
     console.log("Starting server in production mode...");
     app.use(express.static(FRONTEND_DIST));
-    app.get("*", (_req, res) => {
-      res.sendFile(path.join(FRONTEND_DIST, "index.html"));
-    });
+    app.use((_req, res) => {
+  res.sendFile(path.join(FRONTEND_DIST, "index.html"));
+});
   }
 
   app.listen(PORT, "0.0.0.0", () => {
