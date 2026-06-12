@@ -8,7 +8,6 @@ import * as repo from "./src/repository";
 
 dotenv.config();
 
-const FRONTEND_DIST = path.resolve(__dirname, "..", "frontend", "dist");
 
 async function startServer() {
   const app = express();
@@ -37,10 +36,8 @@ async function startServer() {
 
   if (process.env.NODE_ENV === "production") {
     console.log("Starting server in production mode...");
-    app.use(express.static(FRONTEND_DIST));
-    app.use((_req, res) => {
-  res.sendFile(path.join(FRONTEND_DIST, "index.html"));
-});
+  
+    
   }
 
   app.listen(PORT, "0.0.0.0", () => {
